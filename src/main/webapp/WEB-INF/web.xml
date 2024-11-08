@@ -7,67 +7,51 @@
 
     <!-- Welcome page (optional) -->
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
 
     <!-- Servlets configuration -->
 
-    <!-- Add Patient Servlet -->
-    <servlet>
-        <servlet-name>AddPatientServlet</servlet-name>
-        <servlet-class>com.demo.servlet.AddPatientServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddPatientServlet</servlet-name>
-        <url-pattern>/addPatient</url-pattern>
-    </servlet-mapping>
-
-    <!-- Patient List Servlet -->
-    <servlet>
-        <servlet-name>PatientListServlet</servlet-name>
-        <servlet-class>com.demo.servlet.PatientListServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PatientListServlet</servlet-name>
-        <url-pattern>/patientList</url-pattern>
-    </servlet-mapping>
-
-    <!-- Patient Details Servlet -->
-    <servlet>
-        <servlet-name>PatientDetailsServlet</servlet-name>
-        <servlet-class>com.demo.servlet.PatientDetailsServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PatientDetailsServlet</servlet-name>
-        <url-pattern>/patientDetails</url-pattern>
-    </servlet-mapping>
-
-    <!-- Edit Patient Servlet -->
-    <servlet>
-        <servlet-name>EditPatientServlet</servlet-name>
-        <servlet-class>com.demo.servlet.EditPatientServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>EditPatientServlet</servlet-name>
-        <url-pattern>/editPatient</url-pattern>
-    </servlet-mapping>
-
-    <!-- Delete Patient Servlet -->
-    <servlet>
-        <servlet-name>DeletePatientServlet</servlet-name>
-        <servlet-class>com.demo.servlet.DeletePatientServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeletePatientServlet</servlet-name>
-        <url-pattern>/deletePatient</url-pattern>
-    </servlet-mapping>
-
-    <!-- Error Handling Servlet -->
-    <error-page>
-        <exception-type>java.lang.Exception</exception-type>
-        <location>/error.jsp</location>
-    </error-page>
-
+      <servlet>
+          <servlet-name>LoginServlet</servlet-name>
+          <servlet-class>com.demo.servlet.LoginServlet</servlet-class>
+      </servlet>
+  
+      <servlet>
+          <servlet-name>LogoutServlet</servlet-name>
+          <servlet-class>com.demo.servlet.LogoutServlet</servlet-class>
+      </servlet>
+  
+      <servlet>
+          <servlet-name>AdminServlet</servlet-name>
+          <servlet-class>com.demo.servlet.AdminServlet</servlet-class>
+      </servlet>
+  
+      <servlet>
+          <servlet-name>AddUserServlet</servlet-name>
+          <servlet-class>com.demo.servlet.AddUserServlet</servlet-class>
+      </servlet>
+  
+      <servlet-mapping>
+          <servlet-name>LoginServlet</servlet-name>
+          <url-pattern>/login</url-pattern>
+      </servlet-mapping>
+  
+      <servlet-mapping>
+          <servlet-name>LogoutServlet</servlet-name>
+          <url-pattern>/logout</url-pattern>
+      </servlet-mapping>
+  
+      <servlet-mapping>
+          <servlet-name>AdminServlet</servlet-name>
+          <url-pattern>/admin-dashboard</url-pattern>
+      </servlet-mapping>
+  
+      <servlet-mapping>
+          <servlet-name>AddUserServlet</servlet-name>
+          <url-pattern>/add-user</url-pattern>
+      </servlet-mapping>
+  
     <!-- Security (optional) -->
     <!-- You can add security configurations like login authentication here if needed -->
 </web-app>
